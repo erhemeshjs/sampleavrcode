@@ -1,9 +1,11 @@
 /*
  * Beispielprogramm 01-led.c
+ * 
+ * Kleines Beispielprogramm das eine LED an PD5 im Sekungentakt blinken laesst.
+ *
  * (c) Robert Einsle <robert@einsle.de>
  * (c) Michael Hartmann <michael@speicherleck.de>
- * V 0.1, 01-05-2008
- * ATtiny 2313
+ * V 1.0, 09.05.2008
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

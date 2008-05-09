@@ -1,8 +1,27 @@
-// 
-// Anpassungen im makefile:
-//    ATMega8 => MCU=atmega8 im makefile einstellen
-//    lcd-routines.c in SRC = ... Zeile anhängen
-// 
+/*
+ * Beispielprogramm 07-lcd-taster.c
+ *
+ * Erweitertes Beispielprogramm, das ein LCD-Display an PORTA ansteuert
+ * und Informationen ausgibt. Zusätzlich wird an PD3 ein Taster abgefragt,
+ * der eine Zähler auf dem Display hochzählt.
+ *
+ * (c) Robert Einsle <robert@einsle.de>
+ * (c) Michael Hartmann <michael@speicherleck.de>
+ * V 1.0, 09.05.2008
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
