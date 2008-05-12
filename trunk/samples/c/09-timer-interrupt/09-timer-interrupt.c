@@ -24,6 +24,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include "../define.h"
 
 int main(void) {
   // Port D als Ausgang
