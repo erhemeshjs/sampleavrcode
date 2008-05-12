@@ -22,22 +22,23 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "../define.h"
 
 int main(void) {
-  // Port D komplett auf Eingang
-  DDRD = 0x00;
-  // Port D Ping 5 als Ausgang
-  DDRD = (1 << PD5);
+  // Port D Pin 3 als Eingang
+  DDR_TASTER &= ~(1 << P_TASTER);
+  // Port D Pin 5 als Ausgang
+  DDR_LED |= (1 << P_LED);
 
   // Verarbeitungsschleife
   while(1) {
     // Wenn Taster gedrückt
-    if( PIND & (1 << PIND3) ) {
+    if( bit_is_set (PIN_TASTER, P_TASTER)  ) {
       // LED Einschalten
-      PORTD |= (1 << PD5);
+      PORT_LED |= (1 << P_LED);
     } else {
       // Ansonsten LED aus
-      PORTD &= ~(1 << PD5);
+      PORT_LED &= ~(1 << P_LED);
     }
   } 
 

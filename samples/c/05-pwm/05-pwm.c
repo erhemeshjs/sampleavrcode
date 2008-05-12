@@ -22,35 +22,36 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "../define.h"
 
 int main(void) {
 
-  // PIN D5 auf Ausgang
-  DDRD |= (1 << PD5);
+  DDR_LED |= (1 << P_LED);  // PIN D5 auf Ausgang
 
   TCCR0A = (1 << WGM00) | (1 << WGM01);  // Fast PWM Mode
   TCCR0A |= (1 << COM0B1) | (1 << COM0B0);  // Set OC0B on Compare Match,
-                                            // clear OC0B at TOP
   TCCR0B = (1 << CS00);  // Prescaler = CPU-Clock
+  OCR0B = 0;  // Setzen Initial-Wert in Register
 
-  OCR0B = 0;	
-
-//  TCCR0A = (1 << WGM00);  // Phase correct PWM Mode
-//  TCCR0B = (1 << WGM02);  // Phase correct PWM Mode
-//  TCCR0B |= (1 << CS01);
-//  TCCR0A |= (1 << COM0B0) | (1 << COM0B1);  // 
-
-//  TCCR0A = (1<<COM0A1)|(1<<COM0B1)|(1<<WGM10); 
-//  TCCR0B = (1<<CS11); 
-  int i;
+  char dir_up = 0;  // Merker für die Zählrichtung
 
   // Verarbeitungsschleife
   while(1) {
-    for (i = 0; i < 255; i=i+1)
-      {
-        OCR0B = i;
-        _delay_ms(50);
-      }
+    // Steuerung, ob rauf- oder runtergezählt wird.
+    if (dir_up) {
+      OCR0B++;
+    } else {
+      OCR0B--;
+    }
+    // Wenn Grenzwert erreicht, umschalten der Richtung
+    if (OCR0B < 1) {
+      dir_up = 1;
+    }
+    if (OCR0B > 254) {
+      dir_up = 0;
+    }
+    // Kleine Wartezeit
+    _delay_ms(10);
   } 
 
   return 0;

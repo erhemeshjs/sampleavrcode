@@ -22,15 +22,16 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "../define.h"
 
 int main(void) {
   // Port D Pin 5 als Ausgang
-  DDRD = (1 << PD5);
+  DDR_LED |= (1 << P_LED);
 
   // Verarbeitungsschleife
   while(1) {
     // Port D Pin 5 umschalten
-    PORTD = PIND ^ (1 << PD5);
+    PORT_LED ^=  (1 << P_LED);
     // Kurze Wartezeit
     _delay_ms(1000);
   } 

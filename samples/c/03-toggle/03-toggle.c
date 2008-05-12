@@ -23,24 +23,25 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "../define.h"
 
 int main(void) {
   // Hilfsvariable
   char toggled = 0;
   // Datenrichtung komplett auf Eingang
-  DDRD = 0x00;
+  DDR_TASTER &= ~(1 << P_TASTER);
   // PORTD.5 als Ausgang (LED)
-  DDRD = (1 << PD5);
+  DDR_LED |= (1 << P_LED);
 
   // Verarbeitungsschleife
   while(1) {
     // Wenn Taster gedrückt
-    if ( PIND & (1 << PIND3) ) {
+    if ( bit_is_set(PIN_TASTER, P_TASTER) ) {
       // Und nicht schon erkannt
       if (toggled == 0) {
         // Dann merken und Bit umschalten
         toggled = 1;
-        PORTD = PORTD ^ ( 1 << PD5 );
+        PORT_LED ^= (1 << P_LED);
       }
     } else {
       // Erkennung zurücksetzen

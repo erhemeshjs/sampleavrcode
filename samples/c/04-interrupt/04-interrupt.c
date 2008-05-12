@@ -24,6 +24,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include "../define.h"
 
 int main(void) {
   // Enablen der Interrupts an INT1 ( PD3)
@@ -32,10 +33,8 @@ int main(void) {
   MCUCR = ( (1 << ISC11) | (1 << ISC10) );
   // Interrupts ein
   sei();
-  // Data Direction Register
-  DDRD = 0x00;
   // Port D5 auf Ausgang, LED
-  DDRD = (1 << PD5);
+  DDR_LED |= (1 << P_LED);
 
   // Sinnlosschleife
   while(1) { }
@@ -46,6 +45,6 @@ int main(void) {
 // Einsprung Interrupt Service-Routine
 ISR(INT1_vect) {
   // Toggle Bit an PD5 ( LED )
-  PORTD = PORTD ^ ( 1 << PD5 );
+  PORT_LED ^= ( 1 << P_LED );
 }
 
