@@ -31,8 +31,9 @@ int main(void) {
   PORTD = 0;
 
   // Initialisieren des Timers
-  TCCR0 |= (1 << CS00) | (1 << CS02);
-  TIMSK |= (1 << TOV0);
+  TCCR0B = (1 << WGM02);  // CTC - Modus
+  TCCR0B |= (1 << CS02) | (1 << CS00);  // Prescaler = CPU / 1024
+  TIMSK = (1 << TOIE0);  // Interrupt enable
 
   // Interrupts global aktivieren
   sei();
@@ -43,6 +44,7 @@ int main(void) {
   return 0;
 }
 
-ISR(TIMER1_CAPT_vect) {
+ISR(TIMER0_OVF_vect) {
   PORTD++;
 }
+
