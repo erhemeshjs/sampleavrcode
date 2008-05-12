@@ -1,21 +1,11 @@
 # Makefile Test
 #
+include ../Makefile.rules
+#
 # Definition der Object-Files
 OBJ = 03-toggle.o
 HEX = 03-toggle.hex
 #
-# Welches Outputformat
-FORMAT = ihex
-#
-# Definition des Programmers
-SPEED=115200
-PROG=avr910
-SERIAL=/dev/ttyUSB0
-
-MCU=atmega32
-F_CPU=16000000
-CC=avr-gcc
-CFLAGS=-Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU)
 
 %.o : %.c
 	@echo
@@ -39,8 +29,6 @@ all:  $(HEX)
 clean:
 	rm -f *.o *.map *.out *.hex *.elf 
 
-flash : $(HEX)
-	#avrdude -p m32 -c avr910 -P /dev/ttyUSB0 -b 115200 -U flash:w:$(HEX)
-	avrdude -c avrispv2 -P usb -p m32 -U flash:w:$(HEX)
-
+program : $(HEX)
+	avrdude -c $(PROG) -P $(SERIAL) -p $(MCU) -U flash:w:$(HEX)
 
