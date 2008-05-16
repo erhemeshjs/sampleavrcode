@@ -1,0 +1,18 @@
+Stückliste für das Board
+
+
+Teil 	| Bezeichnung 					| Reichelt BstNr.
+----------------------------------------------------------
+IC1		| Atmega Tiny 2312				| ATTINY 2313 DIP
+IC2		| Maxim 232 CPE					| MAX 202 CPE
+Q1		| Quarz 16 Mhz					| 16,0000-HC49U-S
+C1		| Keramikkondensator 22 pF		| KERKO 22P
+C2		| Keramikkondensator 22 pF		| KERKO 22P
+C3		| Elko 100nF RM 2,0				| RAD 0,1/100
+C4		| Elko 100nF RM 2,0				| RAD 0,1/100
+C5		| Elko 100nF RM 2,0				| RAD 0,1/100
+C6		| Elko 100nF RM 2,0				| RAD 0,1/100
+R1		| Wiederstand 10 KOhm			| METALL 10,0K
+JP1		| Stiftleiste 2 pol. RM 2,54	|
+SV1		| Wannenstecker 10 Pol. gerade	| WSL 10G
+X1		| Sub-D Buchse, 9 pol			| D-SUB BU 09EU
