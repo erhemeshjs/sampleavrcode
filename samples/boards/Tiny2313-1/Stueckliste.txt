@@ -1,18 +1,34 @@
 Stückliste für das Board
 
+ teil |         bezeichnung          | Reichelt BstNr
+------+------------------------------+-----------------
+ IC1  | Atmel Tiny 2313              | ATTINY 2313 DIP
+ IC2  | Maxim 232 CPE                | MAX 202 CPE
+ Q1   | Quarz 16 MHz                 | 16,0000-HC49U-S
+ C1   | Keramikkondensator 22 pF     | KERKO 22P
+ C2   | Keramikkondensator 22 pF     | KERKO 22P
+ C3   | Elko 100 nF                  | RAD 0,1/100
+ C4   | Elko 100 nF                  | RAD 0,1/100
+ C5   | Elko 100 nF                  | RAD 0,1/100
+ C6   | Elko 100 nF                  | RAD 0,1/100
+ C7   | Folienkondensator 100nF      | MKS-02 100N
+ R1   | Metalwiederstand 10 k        | METALL 10,0K
+ R2   | Metalwiederstand 270         | METALL 270
+ SV1  | Wannenstecker 10 pol.        | WSL 10G
+ X1   | SUB-D Buchse gewinckelt 9pol | D-SUB BU 09EU
+ JP1  | Stiftleiste 2pol. RM 2,54    | SL 1X36G 2,54
 
-Teil 	| Bezeichnung 					| Reichelt BstNr.
-----------------------------------------------------------
-IC1		| Atmega Tiny 2312				| ATTINY 2313 DIP
-IC2		| Maxim 232 CPE					| MAX 202 CPE
-Q1		| Quarz 16 Mhz					| 16,0000-HC49U-S
-C1		| Keramikkondensator 22 pF		| KERKO 22P
-C2		| Keramikkondensator 22 pF		| KERKO 22P
-C3		| Elko 100nF RM 2,0				| RAD 0,1/100
-C4		| Elko 100nF RM 2,0				| RAD 0,1/100
-C5		| Elko 100nF RM 2,0				| RAD 0,1/100
-C6		| Elko 100nF RM 2,0				| RAD 0,1/100
-R1		| Wiederstand 10 KOhm			| METALL 10,0K
-JP1		| Stiftleiste 2 pol. RM 2,54	|
-SV1		| Wannenstecker 10 Pol. gerade	| WSL 10G
-X1		| Sub-D Buchse, 9 pol			| D-SUB BU 09EU
+ 
+ menge | Reichelt BstNr
+-------+-----------------
+     1 | ATTINY 2313 DIP
+     1 | METALL 10,0K
+     1 | WSL 10G
+     1 | METALL 270
+     1 | MAX 202 CPE
+     1 | MKS-02 100N
+     4 | RAD 0,1/100
+     1 | D-SUB BU 09EU
+     1 | SL 1X36G 2,54
+     2 | KERKO 22P
+     1 | 16,0000-HC49U-S
