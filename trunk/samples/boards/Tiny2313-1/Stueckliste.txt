@@ -2,9 +2,6 @@ Stückliste für das Board
 
  teil |         bezeichnung          | Reichelt BstNr
 ------+------------------------------+-----------------
- IC1  | Atmel Tiny 2313              | ATTINY 2313 DIP
- IC2  | Maxim 232 CPE                | MAX 202 CPE
- Q1   | Quarz 16 MHz                 | 16,0000-HC49U-S
  C1   | Keramikkondensator 22 pF     | KERKO 22P
  C2   | Keramikkondensator 22 pF     | KERKO 22P
  C3   | Elko 100 nF                  | RAD 0,1/100
@@ -12,23 +9,36 @@ Stückliste für das Board
  C5   | Elko 100 nF                  | RAD 0,1/100
  C6   | Elko 100 nF                  | RAD 0,1/100
  C7   | Folienkondensator 100nF      | MKS-4 100N
+ C8   | Folienkondensator 330nF      | MKS-4 330N
+ IC1  | Atmel Tiny 2313              | ATTINY 2313 DIP
+ IC2  | Maxim 232 CPE                | MAX 202 CPE
+ JP1  | Stiftleiste 2pol. RM 2,54    | SL 1X36G 2,54
+ LED1 | LED 5 mm Low Cost            | LED 5MM GN
+ Q1   | Quarz 16 MHz                 | 16,0000-HC49U-S
  R1   | Metalwiederstand 10 k        | METALL 10,0K
  R2   | Metalwiederstand 270         | METALL 270
+ R3   | Metalwiederstand 33 k        | METALL 33,0K
+ S1   | Kurzhubtaster Print          | TASTER 3301
  SV1  | Wannenstecker 10 pol.        | WSL 10G
  X1   | SUB-D Buchse gewinckelt 9pol | D-SUB BU 09EU
- JP1  | Stiftleiste 2pol. RM 2,54    | SL 1X36G 2,54
+
 
  
  menge | Reichelt BstNr
 -------+-----------------
-     1 | ATTINY 2313 DIP
-     1 | METALL 10,0K
-     1 | WSL 10G
-     1 | METALL 270
-     1 | MAX 202 CPE
-     1 | MKS-4 100N
-     4 | RAD 0,1/100
-     1 | D-SUB BU 09EU
-     1 | SL 1X36G 2,54
-     2 | KERKO 22P
      1 | 16,0000-HC49U-S
+     1 | ATTINY 2313 DIP
+     1 | D-SUB BU 09EU
+     2 | KERKO 22P
+     1 | LED 5MM GN
+     1 | MAX 202 CPE
+     1 | METALL 10,0K
+     1 | METALL 270
+     1 | METALL 33,0K
+     1 | MKS-4 100N
+     1 | MKS-4 330N
+     4 | RAD 0,1/100
+     1 | SL 1X36G 2,54
+     1 | TASTER 3301
+     1 | WSL 10G
+
