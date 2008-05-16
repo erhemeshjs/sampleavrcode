@@ -11,7 +11,7 @@ Stückliste für das Board
  C4   | Elko 100 nF                  | RAD 0,1/100
  C5   | Elko 100 nF                  | RAD 0,1/100
  C6   | Elko 100 nF                  | RAD 0,1/100
- C7   | Folienkondensator 100nF      | MKS-02 100N
+ C7   | Folienkondensator 100nF      | MKS-4 100N
  R1   | Metalwiederstand 10 k        | METALL 10,0K
  R2   | Metalwiederstand 270         | METALL 270
  SV1  | Wannenstecker 10 pol.        | WSL 10G
@@ -26,7 +26,7 @@ Stückliste für das Board
      1 | WSL 10G
      1 | METALL 270
      1 | MAX 202 CPE
-     1 | MKS-02 100N
+     1 | MKS-4 100N
      4 | RAD 0,1/100
      1 | D-SUB BU 09EU
      1 | SL 1X36G 2,54
