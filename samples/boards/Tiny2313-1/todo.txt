@@ -1,0 +1,8 @@
+Aenderungen:
+
+- Reset-Taster
+- Pin-Heads fuer I/O
+- Groessere Elkos fuer Max 232 (4,7uF 16 V)
+- Bohrungen in den Ecken für Befestigung (Platz lassen !)
+- LED als 3mm, zusätzliche LED für Power
+- LED und Taster über Jumper
