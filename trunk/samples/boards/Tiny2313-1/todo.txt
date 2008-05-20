@@ -2,7 +2,13 @@ Aenderungen:
 
 - Reset-Taster
 - Pin-Heads fuer I/O
-- Groessere Elkos fuer Max 232 (4,7uF 16 V)
-- Bohrungen in den Ecken für Befestigung (Platz lassen !)
-- LED als 3mm, zusätzliche LED für Power
-- LED und Taster über Jumper
+- Groessere Elkos fuer Max 232 (1 - 10 uF, z.B. 4,7uF 16 V)
+  fÃ¼r Max232A genÃ¼gen 0.1 bi 1uF, kostet aber 2,80 â‚¬ gegenÃ¼ber 0,32 â‚¬
+- Bohrungen in den Ecken fï¿½r Befestigung (Platz lassen !)
+- LED als 3mm, zusï¿½tzliche LED fï¿½r Power
+- LED und Taster ï¿½ber Jumper
+- Miniatursummer (Piezo) Ã¼ber Jumber
+- Sandwich-Board Ã¼ber Pin-Heads anschliessen (alle mc-Pins + GND u. VCC) ?
+
+Sonstiges:
+- bei Gelegenheit PC auf utf8 umstellen :-)
