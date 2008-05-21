@@ -1,12 +1,14 @@
 /*
- * Beispielprogramm 10-led.c
+ * Beispielprogramm 11-uart.c
  *
- * Beispielprogramm, das an PORTD angeschlossene LED's im
- * Binärtakt zum blinken bringt.
+ * Beispielprogramm, das im Sekundentackt die Zeit in Sekunden seit
+ * dem Start des Programmes am seriellen PORT
+ * (UART) mit 9600 Baud (8N1) ausgibt.
+ * LED blinkt im Sekundenrythmus
  *
  * (c) Robert Einsle <robert@einsle.de>
- * (c) Michael Hartmann <michael@speicherleck.de>
- * V 1.0, 09.05.2008
+ * (c) Wernfred Zolnhofer <zoli@augusta.de>
+ * V 1.1, 19.05.2008
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +25,10 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <stdlib.h>
 #include <util/delay.h>
 
+#include "../define.h"
 #include "../uart/uart.h"
 
 #ifndef F_CPU
@@ -35,6 +39,15 @@
 #define UART_BAUD_RATE      9600
 
 int main(void) {
+
+  // Sekunden seit dem letzten Start des Programmes
+  uint32_t sekunden = 0;
+
+  // Platz für Umwandlung in String
+  unsigned char timestring[11];
+
+  // PORTD.5 als Ausgang (LED)
+  DDR_LED |= (1 << P_LED);
 
   // Initialisieren des UArts
   uart_init( UART_BAUD_SELECT(UART_BAUD_RATE, F_CPU) );  
@@ -47,9 +60,18 @@ int main(void) {
 
   // Verarbeitungsschleife
   while(1) {
-    uart_puts("Test\r\n");
-    _delay_ms(1000);
-  }
+    // Sekunden in ASCII umwandel und ausgeben
+    ltoa(sekunden++,timestring,10);
+    uart_puts("Uptime in Sekunden: ");
+    uart_puts(timestring);
+    uart_puts("\r\n");
 
+    // 1 Sekunde warte
+    _delay_ms(1000);
+    
+    // LED toggle
+    PORT_LED ^= 1 << P_LED;
+  }
+  // wird nie erreicht
   return 0;
 }
