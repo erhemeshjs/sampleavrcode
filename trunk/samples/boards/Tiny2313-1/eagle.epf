@@ -89,7 +89,7 @@ UsedLibrary="/opt/eagle-5.0.0/lbr/own/78xx_with_heatsink.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="40 167 1640 1169"
+Loc="50 167 1650 1169"
 State=2
 Number=0
 
