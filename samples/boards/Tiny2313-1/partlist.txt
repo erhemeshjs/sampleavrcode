@@ -1,0 +1,35 @@
+Partlist
+
+Exported from Tiny2313-1.sch at 22.05.08 19:47
+
+EAGLE Version 5.0.0 Copyright (c) 1988-2008 CadSoft
+
+Part     Value          Device          Package      Library        Sheet
+
+C1       22p            C-EU050-024X044 C050-024X044 rcl            1
+C2       22p            C-EU050-024X044 C050-024X044 rcl            1
+C3       4,7uF          CPOL-EUE2-5     E2-5         rcl            1
+C4       4,7uF          CPOL-EUE2-5     E2-5         rcl            1
+C5       4,7uF          CPOL-EUE2-5     E2-5         rcl            1
+C6       4,7uF          CPOL-EUE2-5     E2-5         rcl            1
+C7       100n           C-EU075-032X103 C075-032X103 rcl            1
+C8       330n           C-EU075-032X103 C075-032X103 rcl            1
+IC1      AT-Tiny-2313   AT90S2313P      DIL20        avr-4          1
+IC2      MAX232         MAX232          DIL16        maxim          1
+JP1                     PINHD-1X2       1X02         pinhead        1
+JP2                     PINHD-1X8       1X08         pinhead        1
+JP3                     PINHD-1X7       1X07         pinhead        1
+JP4                     JP1Q            JP1          jumper         1
+JP5                     JP1Q            JP1          jumper         1
+JP6                     JP1Q            JP1          jumper         1
+JP7                     JP1Q            JP1          jumper         1
+LED1     gn             LED3MM          LED3MM       led            1
+LED2     rt             LED3MM          LED3MM       led            1
+Q1       16 MHz         CRYSTALHC49S    HC49/S       crystal        1
+R1       10k            R-EU_0204/7     0204/7       rcl            1
+R2       270            R-EU_0204/7     0204/7       rcl            1
+R3       33k            R-EU_0204/7     0204/7       rcl            1
+R4       270            R-EU_0204/7     0204/7       rcl            1
+S1                      10-XX           B3F-10XX     switch-omron   1
+SV1                     ML10            ML10         con-harting-ml 1
+X1                      F09HP           F09HP        con-subd       1
