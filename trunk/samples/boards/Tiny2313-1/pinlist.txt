@@ -1,0 +1,149 @@
+Pinlist
+
+Exported from Tiny2313-1.sch at 22.05.08 19:47
+
+EAGLE Version 5.0.0 Copyright (c) 1988-2008 CadSoft
+
+Part     Pad      Pin        Dir      Net
+
+C1       1        1          Pas      GND
+         2        2          Pas      N$1
+
+C2       1        1          Pas      GND
+         2        2          Pas      N$2
+
+C3       +        +          Pas      N$8
+         -        -          Pas      N$9
+
+C4       +        +          Pas      N$10
+         -        -          Pas      N$11
+
+C5       +        +          Pas      +5V
+         -        -          Pas      N$12
+
+C6       +        +          Pas      N$13
+         -        -          Pas      GND
+
+C7       1        1          Pas      +5V
+         2        2          Pas      GND
+
+C8       1        1          Pas      N$19
+         2        2          Pas      GND
+
+IC1      1        RESET      I/O      N$3
+         2        (RXD)PD0   I/O      N$15
+         3        (TXD)PD1   I/O      N$14
+         4        XTAL2      I/O      N$1
+         5        XTAL1      I/O      N$2
+         6        (INT0)PD2  I/O      N$27
+         7        (INT1)PD3  I/O      N$29
+         8        (T0)PD4    I/O      N$26
+         9        (T1)PD5    I/O      N$7
+         10       GND        Pwr      GND
+         11       (ICP)PD6   I/O      N$25
+         12       (AIN0)PB0  I/O      N$20
+         13       (AIN1)PB1  I/O      N$21
+         14       PB2        I/O      N$22
+         15       (OCI)PB3   I/O      N$23
+         16       PB4        I/O      N$24
+         17       (MOSI)PB5  I/O      N$4
+         18       (MISO)PB6  I/O      N$6
+         19       (SCK)PB7   I/O      N$5
+         20       VCC        Pwr      +5V
+
+IC2      1        C1+        I/O      N$8
+         2        V+         I/O      N$12
+         3        C1-        I/O      N$9
+         4        C2+        I/O      N$10
+         5        C2-        I/O      N$11
+         6        V-         I/O      N$13
+         7        T2OUT      Out               *** unconnected ***
+         8        R2IN       In                *** unconnected ***
+         9        R2OUT      Out               *** unconnected ***
+         10       T2IN       In                *** unconnected ***
+         11       T1IN       In       N$31
+         12       R1OUT      Out      N$32
+         13       R1IN       In       N$17
+         14       T1OUT      Out      N$16
+         15       GND        Pwr      GND
+         16       VCC        Pwr      +5V
+
+JP1      1        1          Pas      GND
+         2        2          Pas      +5V
+
+JP2      1        1          Pas      N$5
+         2        2          Pas      N$6
+         3        3          Pas      N$4
+         4        4          Pas      N$24
+         5        5          Pas      N$23
+         6        6          Pas      N$22
+         7        7          Pas      N$21
+         8        8          Pas      N$20
+
+JP3      1        1          Pas      N$25
+         2        2          Pas      N$7
+         3        3          Pas      N$26
+         4        4          Pas      N$29
+         5        5          Pas      N$27
+         6        6          Pas      N$14
+         7        7          Pas      N$15
+
+JP4      1        1          Pas      N$29
+         2        2          Pas      N$19
+
+JP5      1        1          Pas      N$28
+         2        2          Pas      N$7
+
+JP6      1        1          Pas      N$32
+         2        2          Pas      N$15
+
+JP7      1        1          Pas      N$31
+         2        2          Pas      N$14
+
+LED1     A        A          Pas      N$18
+         K        C          Pas      GND
+
+LED2     A        A          Pas      N$30
+         K        C          Pas      +5V
+
+Q1       1        1          Pas      N$2
+         2        2          Pas      N$1
+
+R1       1        1          Pas      +5V
+         2        2          Pas      N$3
+
+R2       1        1          Pas      N$28
+         2        2          Pas      N$18
+
+R3       1        1          Pas      GND
+         2        2          Pas      N$19
+
+R4       1        1          Pas      GND
+         2        2          Pas      N$30
+
+S1       1        S          Pas      N$19
+         2        S1         Pas               *** unconnected ***
+         3        P          Pas      +5V
+         4        P1         Pas               *** unconnected ***
+
+SV1      1        1          Pas      N$4
+         2        2          Pas      +5V
+         3        3          Pas               *** unconnected ***
+         4        4          Pas      GND
+         5        5          Pas      N$3
+         6        6          Pas      GND
+         7        7          Pas      N$5
+         8        8          Pas      GND
+         9        9          Pas      N$6
+         10       10         Pas      GND
+
+X1       1        1          Pas               *** unconnected ***
+         2        2          Pas      N$16
+         3        3          Pas      N$17
+         4        4          Pas               *** unconnected ***
+         5        5          Pas      GND
+         6        6          Pas               *** unconnected ***
+         7        7          Pas               *** unconnected ***
+         8        8          Pas               *** unconnected ***
+         9        9          Pas               *** unconnected ***
+
