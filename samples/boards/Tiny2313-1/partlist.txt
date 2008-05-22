@@ -1,6 +1,6 @@
 Partlist
 
-Exported from Tiny2313-1.sch at 22.05.08 21:57
+Exported from Tiny2313-1.sch at 22.05.08 22:09
 
 EAGLE Version 5.0.0 Copyright (c) 1988-2008 CadSoft
 
