@@ -10,6 +10,9 @@
  * (c) Wernfred Zolnhofer <zoli@augusta.de>
  * V 1.1, 19.05.2008
  *
+ * Software:  AVR-GCC 4.2 
+ * Target:    ATtiny2313 auf Pollin Entwicklungsboard
+
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -43,7 +46,7 @@ int main(void) {
   // Sekunden seit dem letzten Start des Programmes
   uint32_t sekunden = 0;
 
-  // Platz für Umwandlung in String
+  // Platz fï¿½r Umwandlung in String
   unsigned char timestring[11];
 
   // PORTD.5 als Ausgang (LED)
