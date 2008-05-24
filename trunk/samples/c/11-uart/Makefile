@@ -3,7 +3,7 @@
 include ../Makefile.rules
 #
 # Definition der Object-Files
-OBJ = 11-uart.o ../uart/uart.o
+OBJ = 11-uart.o
 HEX = 11-uart.hex
 #
 
@@ -30,7 +30,6 @@ all:  $(HEX)
 
 clean:
 	rm -f *.o *.map *.out *.hex *.elf 
-	rm -f ../uart/*.o 
 
 program : $(HEX)
 	avrdude -c $(PROG) -P $(SERIAL) -p $(MCU) -U flash:w:$(HEX)

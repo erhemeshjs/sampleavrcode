@@ -32,7 +32,6 @@
 #include <util/delay.h>
 
 #include "../define.h"
-#include "../uart/uart.h"
 
 #ifndef F_CPU
 #define F_CPU 1000000UL
@@ -43,38 +42,60 @@
 
 int main(void) {
 
-  // Sekunden seit dem letzten Start des Programmes
-  uint32_t sekunden = 0;
+    // Sekunden seit dem letzten Start des Programmes
+    uint32_t sekunden = 0;
 
-  // Platz f�r Umwandlung in String
-  unsigned char timestring[11];
+    // Platz f�r Umwandlung in String
+    unsigned char timestring[11];
 
-  // PORTD.5 als Ausgang (LED)
-  DDR_LED |= (1 << P_LED);
+    // PORTD.5 als Ausgang (LED)
+    DDR_LED |= (1 << P_LED);
 
-  // Initialisieren des UArts
-  uart_init( UART_BAUD_SELECT(UART_BAUD_RATE, F_CPU) );  
 
-  // Enablen der Interrupts
-  sei();
+    // Enablen der Interrupts
+    sei();
 
-  // Test-String
-  uart_puts("Test UART\r\n");
+    // Test-String
+    uart_puts("Test UART\r\n");
 
-  // Verarbeitungsschleife
-  while(1) {
-    // Sekunden in ASCII umwandel und ausgeben
-    ltoa(sekunden++,timestring,10);
-    uart_puts("Uptime in Sekunden: ");
-    uart_puts(timestring);
-    uart_puts("\r\n");
+    // Verarbeitungsschleife
+    while(1) {
+        // Sekunden in ASCII umwandel und ausgeben
+        ltoa(sekunden++,timestring,10);
+        uart_puts("Uptime in Sekunden: ");
+        uart_puts(timestring);
+        uart_puts("\r\n");
 
-    // 1 Sekunde warte
-    _delay_ms(1000);
+        // 1 Sekunde warte
+        _delay_ms(1000);
     
-    // LED toggle
-    PORT_LED ^= 1 << P_LED;
-  }
-  // wird nie erreicht
-  return 0;
+        // LED toggle
+        PORT_LED ^= (1 << P_LED);
+    }
+    // wird nie erreicht
+    return 0;
+}
+
+uart_init()
+{
+    // Initialisieren des UArts
+    UCSRB = (1 << TXEN) | (1 << RXEN);
+    UCSRC = (1 << UMSEL) | (1 << UCSZ0) | (1 << UCSZ1);
+    UBRRL = 12;
+    UBRRH = 0;
+}
+
+uart_putc(unsigned char data)
+{
+    /* Wait for empty transmit buffer */
+    while ( !( UCSRA & (1<<UDRE)) )
+      ;
+    /* Put data into buffer, sends the data */
+    UDR = data;
+}
+
+uart_puts(const char *s)
+{
+    while (*s)
+        uart_putc(*s++);
 }
