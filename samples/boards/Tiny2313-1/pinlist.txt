@@ -1,6 +1,6 @@
 Pinlist
 
-Exported from Tiny2313-1.sch at 22.05.08 22:09
+Exported from Tiny2313-1.sch at 25.05.08 12:50
 
 EAGLE Version 5.0.0 Copyright (c) 1988-2008 CadSoft
 
@@ -61,10 +61,10 @@ IC2      1        C1+        I/O      N$8
          8        R2IN       In                *** unconnected ***
          9        R2OUT      Out               *** unconnected ***
          10       T2IN       In                *** unconnected ***
-         11       T1IN       In       N$31
-         12       R1OUT      Out      N$32
-         13       R1IN       In       N$17
-         14       T1OUT      Out      N$16
+         11       T1IN       In       TTL-TXD
+         12       R1OUT      Out      TTL-RXD
+         13       R1IN       In       RXD
+         14       T1OUT      Out      TXD
          15       GND        Pwr      GND
          16       VCC        Pwr      +5V
 
@@ -94,10 +94,10 @@ JP4      1        1          Pas      PD3
 JP5      1        1          Pas      N$28
          2        2          Pas      PD5
 
-JP6      1        1          Pas      N$32
+JP6      1        1          Pas      TTL-RXD
          2        2          Pas      PD0
 
-JP7      1        1          Pas      N$31
+JP7      1        1          Pas      TTL-TXD
          2        2          Pas      PD1
 
 JP8      1        1          Pas      PB5
@@ -110,6 +110,10 @@ JP8      1        1          Pas      PB5
          8        8          Pas      GND
          9        9          Pas      PB6
          10       10         Pas      GND
+
+JP9      1        1          Pas      RXD
+         2        2          Pas      GND
+         3        3          Pas      TXD
 
 LED1     A        A          Pas      N$18
          K        C          Pas      GND
@@ -138,8 +142,8 @@ S1       1        S          Pas               *** unconnected ***
          4        P1         Pas      +5V
 
 X1       1        1          Pas               *** unconnected ***
-         2        2          Pas      N$16
-         3        3          Pas      N$17
+         2        2          Pas      TXD
+         3        3          Pas      RXD
          4        4          Pas               *** unconnected ***
          5        5          Pas      GND
          6        6          Pas               *** unconnected ***
