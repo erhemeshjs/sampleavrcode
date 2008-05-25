@@ -25,6 +25,7 @@ UsedLibrary="/opt/eagle-5.0.0/lbr/con-wago-500.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/con-wago-508.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/con-wago.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/con-wago255.lbr"
+UsedLibrary="/opt/eagle-5.0.0/lbr/con-weidmueller-sl35.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/crystal.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/dc-dc-converter.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/diode.lbr"
@@ -86,10 +87,11 @@ UsedLibrary="/opt/eagle-5.0.0/lbr/own/atmel.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/own/atmel-1.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/own/at90can128.lbr"
 UsedLibrary="/opt/eagle-5.0.0/lbr/own/78xx_with_heatsink.lbr"
+UsedLibrary="/opt/eagle-5.0.0/lbr/own/con-wago.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="5 61 1605 1063"
+Loc="25 157 1625 1159"
 State=2
 Number=0
 
