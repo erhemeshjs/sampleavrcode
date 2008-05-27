@@ -1,5 +1,5 @@
 /*
- * Beispielprogramm 07-lcd-taster.c
+ * Beispielprogramm 06-lcd-taster.c
  *
  * Erweitertes Beispielprogramm, das ein LCD-Display an PORTA ansteuert
  * und Informationen ausgibt. Zusätzlich wird an PD3 ein Taster abgefragt,

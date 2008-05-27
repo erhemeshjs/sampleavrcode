@@ -3,8 +3,8 @@
 include ../Makefile.rules
 #
 # Definition der Object-Files
-OBJ = 06-lcd.o lcd.o
-HEX = 06-lcd.hex
+OBJ = 05-lcd.o lcd.o
+HEX = 05-lcd.hex
 #
 
 %.o : %.c

@@ -1,8 +1,8 @@
 /*
- * Beispielprogramm 06-lcd.c
+ * Beispielprogramm 07-led.c
  *
- * Beispielprogramm, das ein LCD-Display, das an PORTA angeschlossen ist,
- * ansteuert.
+ * Beispielprogramm, das an PORTD angeschlossene LED's im
+ * Binärtakt zum blinken bringt.
  *
  * (c) Robert Einsle <robert@einsle.de>
  * (c) Michael Hartmann <michael@speicherleck.de>
@@ -22,27 +22,19 @@
 */
 
 #include <avr/io.h>
-// Include der speziellen lcd.h
-#include "lcd.h"
- 
-int main(void)
-{
-  // Initialisieren des LCD-DISPLAYS
-  lcd_init(LCD_DISP_ON);
+#include <util/delay.h>
 
-  // Löschen des Textes auf dem Display
-  lcd_clrscr();
-        
-  // Zeichnen des Strings auf das Display
-  lcd_puts("LCD Test Line 1\n");
+int main(void) {
+  // Port D Pin 5 als Ausgang
+  DDRD  = 255;
+  PORTD = 0;
 
-  // Der Cursor ist jetzt in der 2. Zeile (\n), jetzt der Inhalt der 2. Zeile
-  lcd_puts("Line 2");
-  
-  // Verarbeitungsschleife      
-  while(1)
-    {
-    }
- 
+  // Verarbeitungsschleife
+  while(1) {
+    PORTD++;
+    // Kurze Wartezeit
+    _delay_ms(1000);
+  }
+
   return 0;
 }
