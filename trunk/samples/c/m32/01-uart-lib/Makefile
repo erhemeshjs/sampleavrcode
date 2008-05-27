@@ -29,8 +29,8 @@ CFLAGS=-Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I . -I ../uart
 all:  $(HEX)
 
 clean:
+	rm -f $(OBJ)
 	rm -f *.o *.map *.out *.hex *.elf 
-	rm -f ../uart/*.o
 
 program : $(HEX)
 	avrdude -c $(PROG) -P $(SERIAL) -p $(MCU) -U flash:w:$(HEX)
