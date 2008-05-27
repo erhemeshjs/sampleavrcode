@@ -1,0 +1,26 @@
+# Makefile.rules
+#
+# Hier werden die grundsätzlichen Definitionen der Projekte
+# gesetzt, damit diese nicht in jedem einzelnen Projekt 
+# separat gesetzt werden müssen.
+#
+# (c) by Robert Einsle <robert@einsle.de>
+
+FORMAT=ihex
+
+# Definition des Programmers
+
+# AVR910 USB-Serial Programmer
+#PROG="avr910 -b 115200"
+#SERIAL=/dev/ttyUSB0
+
+# usbprog
+PROG=avrispv2
+SERIAL=usb
+
+#MCU=attiny2313
+MCU=atmega32
+F_CPU=16000000
+CC=avr-gcc
+CFLAGS=-Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU)
+
