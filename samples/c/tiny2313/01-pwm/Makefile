@@ -3,8 +3,8 @@
 include ../Makefile.rules
 #
 # Definition der Object-Files
-OBJ = 05-pwm.o
-HEX = 05-pwm.hex
+OBJ = 01-pwm.o
+HEX = 01-pwm.hex
 #
 
 %.o : %.c

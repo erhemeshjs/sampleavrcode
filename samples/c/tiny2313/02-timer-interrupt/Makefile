@@ -3,8 +3,8 @@
 include ../Makefile.rules
 #
 # Definition der Object-Files
-OBJ = 09-timer-interrupt.o
-HEX = 09-timer-interrupt.hex
+OBJ = 02-timer-interrupt.o
+HEX = 02-timer-interrupt.hex
 #
 
 %.o : %.c
