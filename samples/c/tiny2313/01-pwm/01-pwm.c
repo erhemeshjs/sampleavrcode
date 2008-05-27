@@ -1,8 +1,7 @@
 /*
- * Beispielprogramm 09-timer-interrupt.c
+ * Beispielprogramm 01-pwm.c
  *
- * Beispielprogramm, das den internen Timer im AVR nutzt um eine LED
- * an PD5 blinken zu lassen.
+ * Kleines Beispielprogramm das eine LED an PD5 dimmt
  *
  * (c) Robert Einsle <robert@einsle.de>
  * (c) Michael Hartmann <michael@speicherleck.de>
@@ -22,30 +21,38 @@
 */
 
 #include <avr/io.h>
-#include <avr/interrupt.h>
 #include <util/delay.h>
 #include "../define.h"
 
 int main(void) {
-  // Port D als Ausgang
-  DDRD = 0xFF;
-  PORTD = 0;
 
-  // Initialisieren des Timers
-  TCCR0B = (1 << WGM02);  // CTC - Modus
-  TCCR0B |= (1 << CS02) | (1 << CS00);  // Prescaler = CPU / 1024
-  TIMSK = (1 << TOIE0);  // Interrupt enable
+  DDR_LED |= (1 << P_LED);  // PIN D5 auf Ausgang
 
-  // Interrupts global aktivieren
-  sei();
+  TCCR0A = (1 << WGM00) | (1 << WGM01);  // Fast PWM Mode
+  TCCR0A |= (1 << COM0B1) | (1 << COM0B0);  // Set OC0B on Compare Match,
+  TCCR0B = (1 << CS00);  // Prescaler = CPU-Clock
+  OCR0B = 0;  // Setzen Initial-Wert in Register
 
-  // Sinnlosschleife
-  while(1) { }
+  char dir_up = 0;  // Merker für die Zählrichtung
+
+  // Verarbeitungsschleife
+  while(1) {
+    // Steuerung, ob rauf- oder runtergezählt wird.
+    if (dir_up) {
+      OCR0B++;
+    } else {
+      OCR0B--;
+    }
+    // Wenn Grenzwert erreicht, umschalten der Richtung
+    if (OCR0B < 1) {
+      dir_up = 1;
+    }
+    if (OCR0B > 254) {
+      dir_up = 0;
+    }
+    // Kleine Wartezeit
+    _delay_ms(10);
+  } 
 
   return 0;
 }
-
-ISR(TIMER0_OVF_vect) {
-  PORTD++;
-}
-
