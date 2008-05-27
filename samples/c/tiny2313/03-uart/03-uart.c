@@ -71,7 +71,7 @@ void uart_init(void)
     // Enable TX und RX 
     UCSRB = (1 << TXEN) | (1 << RXEN);
     // Asyncron, 8n1
-    UCSRC = (1 << URSEL) | (3 << UCSZ0);
+    UCSRC = (3 << UCSZ0);
     // Setzen der BAUD-Rate
     UBRRH = (uint8_t) ((F_CPU / (BAUD_RATE * 16L) -1) >> 8);
     UBRRL = (uint8_t) (F_CPU / (BAUD_RATE * 16L) -1);
