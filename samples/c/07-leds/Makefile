@@ -3,8 +3,8 @@
 include ../Makefile.rules
 #
 # Definition der Object-Files
-OBJ = 10-led.o
-HEX = 10-led.hex
+OBJ = 07-led.o
+HEX = 07-led.hex
 #
 
 %.o : %.c

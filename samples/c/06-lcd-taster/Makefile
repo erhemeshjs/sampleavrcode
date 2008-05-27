@@ -3,8 +3,8 @@
 include ../Makefile.rules
 #
 # Definition der Object-Files
-OBJ = 07-lcd-taster.o lcd.o
-HEX = 07-lcd-taster.hex
+OBJ = 06-lcd-taster.o lcd.o
+HEX = 06-lcd-taster.hex
 #
 
 %.o : %.c
