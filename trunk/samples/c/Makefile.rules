@@ -18,9 +18,10 @@ FORMAT=ihex
 PROG=avrispv2
 SERIAL=usb
 
-#MCU=attiny2313
-MCU=atmega32
-F_CPU=16000000
+MCU=attiny2313
+F_CPU=8000000
+#MCU=atmega32
+#F_CPU=16000000
 CC=avr-gcc
 CFLAGS=-Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU)
 
