@@ -1,5 +1,5 @@
 /*
- * Beispielprogramm 01-uart.c
+ * Beispielprogramm 01-uart-lib.c
  *
  * Beispielprogramm, das im Sekundentackt die Zeit in Sekunden seit
  * dem Start des Programmes am seriellen PORT
@@ -30,11 +30,6 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include <stdio.h>
-
-#ifndef F_CPU
-#define F_CPU 8000000UL
-#endif
-#define BAUD_RATE 9600
 
 /**
  * Hauptverarbeitungsschleife
