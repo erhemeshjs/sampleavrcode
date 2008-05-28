@@ -7,7 +7,7 @@
  *
  * @param baud Die Baudrate, mit der der UART betrieben werden soll
  */
-extern void uart_init(char baud);
+extern void uart_init(void);
 
 /*
  * Senden eines Zeichens ueber die UART Schnittstelle
