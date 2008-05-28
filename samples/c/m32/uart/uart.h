@@ -17,6 +17,14 @@ extern void uart_init(void);
 extern void uart_putc(char data);
 
 /*
+ * Routine zum Schreiben der Daten auf std-out
+ *
+ * @param data das zu schreibende Zeichen
+ * @param stream der Stream zum schreiben
+ */
+void uart_putchar(char data, FILE *stream);
+
+/*
  * Senden eines Zeichenarrays ueber die UArt Schnittstelle
  *
  * @param *s Der String, der ueber UART ausgegeben werden soll
