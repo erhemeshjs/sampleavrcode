@@ -46,6 +46,9 @@ void uart_puts(const char *s);
  */
 int main(void) {
 
+    // Init PORTD.5 als Ausgang
+    DDRD = (1 << PD5);
+
     // Init des UARTS
     uart_init();
 
@@ -57,6 +60,9 @@ int main(void) {
     {
       uart_puts("Hallo Welt\r\n");
       _delay_ms(1000);
+
+      // PortD.5 umschalten
+      PORTD ^= (1 << PD5);
     }
 
     // wird nie erreicht
