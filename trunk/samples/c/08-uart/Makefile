@@ -3,8 +3,8 @@
 include ../Makefile.rules
 #
 # Definition der Object-Files
-OBJ = 01-uart-lib.o ../uart/uart.o
-HEX = 01-uart-lib.hex
+OBJ = 08-uart.o ../uart/uart.o
+HEX = 08-uart.hex
 #
 
 CFLAGS=-Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I . -I ../uart
