@@ -25,14 +25,59 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include <util/twi.h>
+
+void error(void);
 
 int main(void)
 {
-  DDRD = (1 << PD5);
+    DDRD = (1 << PD5);
+  
+    // Init des TWI-Bus
+    TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
+  
+    // Warten bis TW Start transmitted
+    while (!(TWCR & (1 << TWINT)))
+      ;
+  
+    // Ueberpruefung ob START-Condition
+	if ((TWSR & 0xF8) != TW_START)
+	  error();
+	  
+	// Setzen der Client-Address
+	TWDR = 0xA1; // Client Address
+	TWCR = (1 << TWINT) | (1 << TWEN);
+	
+    // Warten bis TW Start transmitted
+    while (!(TWCR & (1 << TWINT)))
+      ;
+  
+    // Ueberpruefung ob START-Condition
+	if ((TWSR & 0xF8) != TW_START)
+	  error();
+	  
+	// Schreiben der Daten an den Client
+	TWDR = 0xFF;
+	TWCR = (1 << TWINT) | (1 << TWEN);
+	
+    // Warten bis TW Start transmitted
+    while (!(TWCR & (1 << TWINT)))
+      ;
+  
+    // Ueberpruefung ob START-Condition
+	if ((TWSR & 0xF8) != TW_START)
+	  error();
 
-  // Verarbeitungsschleife
-  while(1)
-  {
-  }
-  return 0;
+    // Senden von Stop
+    TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWSTO);	
+
+    // Verarbeitungsschleife
+    while(1)
+    {
+    }
+    return 0;
+}
+
+void error(void)
+{
 }
