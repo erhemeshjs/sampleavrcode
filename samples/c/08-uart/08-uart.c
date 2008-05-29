@@ -30,6 +30,7 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include <stdio.h>
+#include "uart.h"
 
 /**
  * Hauptverarbeitungsschleife
@@ -40,7 +41,7 @@ int main(void) {
     DDRD |= (1 << PD5);
 
     // Init des UARTS
-    uart_init(9600);
+    uart_init();
 
     // Senden String
     uart_puts("Start\r\n");
