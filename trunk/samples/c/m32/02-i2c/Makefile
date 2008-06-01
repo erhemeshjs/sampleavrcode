@@ -3,11 +3,11 @@
 include ../Makefile.rules
 #
 # Definition der Object-Files
-OBJ = 02-i2c.o
+OBJ = 02-i2c.o ../../uart/uart.o
 HEX = 02-i2c.hex
 #
 
-CFLAGS=-Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I .
+CFLAGS=-Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I . -I ../../uart/
 
 %.o : %.c
 	@echo
@@ -29,6 +29,7 @@ CFLAGS=-Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I .
 all:  $(HEX)
 
 clean:
+	rm -f $(OBJ)
 	rm -f *.o *.map *.out *.hex *.elf 
 
 program : $(HEX)
