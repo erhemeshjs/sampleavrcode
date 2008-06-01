@@ -2,6 +2,8 @@
  * Schnittstellenbeschreibung der uart-Library
  */
 
+#include <stdio.h>
+
 /*
  * Init des RS-232 (UART) Systemes
  *
