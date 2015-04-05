@@ -1,0 +1,1 @@
+Dieses Projekt sammelt kleine AVR-Code-Samples als Beispielcode zum ausprobieren auf diversen AVR 8bit Microcontrollern. Diese Code-Samples werden unter der Apache 2.0 License veröffentlicht.
